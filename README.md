@@ -1,34 +1,24 @@
-  Projects & Work
+ I'm Edmar M. Bestudio
 
- Inventory Management System
+Welcome to my GitHub! I'm a second-year Information Systems student from Davao del Norte, currently studying at Davao del Norte State College. I am passionate about technology, research, and developing systems that support real-world needs.
 
-A system developed to manage and organize product inventory efficiently. It allows tracking of items, stock levels, and basic records to support better decision-making.
-Technologies Used: Java, MySQL
+ About Me
 
-This project was created during my Computer Programming 2 course, applying programming logic and database integration in solving real-world inventory problems.
+Hello! My name is EDMAR M. BESTUDIO, a second-year college student taking up Bachelor of Science in Information Systems. I have a strong interest in system analysis, research, and technical documentation, as well as learning how technology can improve business processes and organizational workflows.
 
+As a student, I enjoy working on projects that involve data gathering, documentation, and system development. I am currently improving my knowledge in Microsoft Office tools, basic programming, web development, and database concepts. I also focus on creating organized and well-documented outputs, especially in academic and research-related tasks.
 
- Experience
+During my college journey, I have developed projects such as an Customer Feedback System and Reservation System of Salon. These projects helped me enhance my problem-solving skills, attention to detail, and understanding of how systems are designed and implemented.
 
- Office Assistant (Cash for Work Program)
+I also gained experience working as an Office Assistant under the Cash for Work Program at the VPAA Research Office of Davao del Norte State College. This role allowed me to assist in handling research documents, organizing files, and supporting office operations, which strengthened my communication and organizational skills.
 
-Davao del Norte State College – VPAA Research Office
+Academically, I am a Dean’s Lister, which reflects my dedication and commitment to my studies. I strive to continuously improve my skills and knowledge to become more effective in my field.
 
-* Assisted in organizing and distributing research-related documents
-* Supported office operations involving academic and administrative tasks
-* Handled document processing and coordination between offices
+Outside of academics, I have an interest in creative activities and personal development, which help me stay balanced and motivated.
 
- Achievements
+My goal is to further develop my skills in Information Systems, particularly in system analysis, documentation, and process improvement. In the future, I aim to contribute to projects that require strong analytical thinking and help organizations become more efficient through technology.
 
-*  Dean’s Lister – Davao del Norte State College (A.Y. 2024–2025)
-*  With High Honors – Carmen National High School (GWA: 96)
-
- Skills
-
-* Microsoft Office (Word, Excel, PowerPoint, PDF)
-* Technical Documentation and Writing
-* Data Gathering and Research Support
-* Basic Programming and Web Development
+  
 
  Interests
 
