@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Edmar |  Portfolio</title>
+<title>Edmar | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -22,7 +22,7 @@ color:#fff;
 overflow-x:hidden;
 }
 
-/* 🌈 ANIME BACKGROUND ANIMATION */
+/* 🌈 ANIME BACKGROUND */
 body::before{
 content:"";
 position:fixed;
@@ -95,7 +95,6 @@ list-style:none;
 nav a{
 color:#ddd;
 text-decoration:none;
-transition:.3s;
 }
 
 nav a:hover{
@@ -111,12 +110,6 @@ align-items:center;
 justify-content:space-between;
 padding:0 10%;
 gap:60px;
-animation:fadeIn 1.5s ease;
-}
-
-@keyframes fadeIn{
-from{opacity:0; transform:translateY(30px);}
-to{opacity:1; transform:translateY(0);}
 }
 
 .hero-image img{
@@ -141,12 +134,11 @@ max-width:650px;
 
 .hero-text h1{
 font-size:3.2rem;
-text-shadow:0 0 15px #000;
 }
 
 .hero-text span{
 color:#facc15;
-text-shadow:0 0 15px #facc15;
+text-shadow:0 0 10px #facc15;
 }
 
 .hero-text p{
@@ -182,12 +174,6 @@ background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.1);
 backdrop-filter:blur(10px);
 transition:.4s;
-animation:slideUp 1s ease;
-}
-
-@keyframes slideUp{
-from{opacity:0; transform:translateY(50px);}
-to{opacity:1; transform:translateY(0);}
 }
 
 .project-card:hover{
@@ -214,16 +200,39 @@ transition:.4s;
 transform:scale(1.1);
 }
 
-/* EDUCATION */
+/* EDUCATION (FIXED WITH IMAGE) */
 .edu-box{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
 text-align:center;
 padding:30px;
 border-radius:20px;
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.1);
-max-width:600px;
+max-width:800px;
 margin:auto;
-animation:fadeIn 2s ease;
+}
+
+.edu-box img{
+width:260px;
+height:180px;
+object-fit:cover;
+border-radius:15px;
+border:2px solid #facc15;
+box-shadow:0 0 20px rgba(255,215,0,0.3);
+}
+
+.edu-text h3{
+color:#facc15;
+margin-bottom:8px;
+}
+
+.edu-text p{
+color:#ccc;
+line-height:1.6;
 }
 
 /* SKILLS */
@@ -262,6 +271,7 @@ background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.1);
 }
 
+/* FOOTER */
 footer{
 text-align:center;
 padding:20px;
@@ -320,7 +330,7 @@ width:100%;
 
 <div class="hero-text">
 <h1>Hi, I'm <span>Edmar</span> ⚡</h1>
-<p>Information Systems student passionate about building systems, solving real-world problems, and learning modern technology with creativity and discipline.</p>
+<p>Information Systems student passionate about building systems and solving real-world problems.</p>
 </div>
 </section>
 
@@ -353,14 +363,18 @@ width:100%;
 </div>
 </section>
 
-<!-- EDUCATION -->
+<!-- EDUCATION (FIXED) -->
 <section id="education">
 <h2 class="title">EDUCATION</h2>
 
 <div class="edu-box">
+<img src="schoolpic.jpg" alt="School">
+
+<div class="edu-text">
 <h3>Davao del Norte State College</h3>
 <p>Bachelor of Science in Information Systems</p>
 <p>2024 - 2028</p>
+</div>
 </div>
 </section>
 
@@ -369,8 +383,8 @@ width:100%;
 <h2 class="title">SKILLS</h2>
 
 <div class="skills">
-<div class="skill-box">HTML / CSS / JS</div>
-<div class="skill-box">Microsoft Office</div>
+<div class="skill-box">HTML</div>
+<div class="skill-box">Microsoft Office/Excel</div>
 <div class="skill-box">Documentation</div>
 <div class="skill-box">Calligraphy</div>
 </div>
@@ -380,8 +394,25 @@ width:100%;
 <section id="contact">
 <h2 class="title">CONTACT</h2>
 
-<div class="contact">
-<div class="contact-box">bestudioedmar@gmail.com</div>
+<h3>Email</h3>
+<p>bestudioedmar@gmail.com</p>
+</div>
+
+<div class="contact-box">
+<h3>Phone</h3>
+<p>+63 9104955490</p>
+</div>
+
+<div class="contact-box">
+<h3>Location</h3>
+<p>Davao del Norte, Philippines</p>
+</div>
+
+<div class="contact-box">
+<h3>Facebook</h3>
+<p>Edmar Bestudio</p>
+</div>
+
 </div>
 </section>
 
