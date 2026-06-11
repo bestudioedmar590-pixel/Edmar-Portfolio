@@ -105,23 +105,23 @@ line-height:1.7;
 /* TITLE */
 .title{
 text-align:center;
-margin-bottom:15px;
+margin-bottom:45px;
 color:#facc15;
 font-size:28px;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects-section{
+padding:100px 10%;
 }
 
 .subtitle{
 text-align:center;
 color:#aaa;
+margin-top:-20px;
 margin-bottom:50px;
 font-size:14px;
-}
-
-/* ================= PROJECTS (ULTRA PRO) ================= */
-
-.projects-section{
-padding:100px 10%;
-background:#0b0b0f;
 }
 
 .projects-container{
@@ -173,7 +173,6 @@ font-weight:700;
 color:rgba(255,215,0,0.35);
 }
 
-/* IMAGE FRAME */
 .frame{
 width:100%;
 max-width:340px;
@@ -195,7 +194,6 @@ transition:.4s;
 transform:scale(1.08);
 }
 
-/* TEXT */
 .project-info{
 flex:1;
 }
@@ -213,7 +211,6 @@ line-height:1.7;
 margin-bottom:15px;
 }
 
-/* TAGS */
 .tags{
 display:flex;
 flex-wrap:wrap;
@@ -228,25 +225,66 @@ border:1px solid rgba(255,215,0,0.3);
 color:#facc15;
 }
 
-/* ================= OTHER SECTIONS ================= */
-
-.edu-box, .contact-box, .skill-box{
-background:rgba(255,255,255,0.04);
-padding:20px;
-border-radius:15px;
-border:1px solid rgba(255,215,0,0.1);
-}
+/* ================= EDUCATION ================= */
 
 section{
 padding:90px 10%;
 }
 
+.edu-box{
+display:flex;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+justify-content:center;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,215,0,0.15);
+padding:25px;
+border-radius:18px;
+backdrop-filter:blur(10px);
+}
+
+.edu-img img{
+width:260px;
+height:180px;
+object-fit:cover;
+border-radius:14px;
+border:2px solid rgba(255,215,0,0.3);
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+transition:.4s;
+}
+
+.edu-img img:hover{
+transform:scale(1.05);
+}
+
+.edu-info h3{
+color:#facc15;
+margin-bottom:8px;
+font-size:20px;
+}
+
+.edu-info p{
+color:#ccc;
+font-size:14px;
+line-height:1.6;
+}
+
+/* SKILLS */
 .skills{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
+.skill-box{
+background:rgba(255,255,255,0.04);
+padding:20px;
+border-radius:15px;
+border:1px solid rgba(255,215,0,0.1);
+}
+
+/* CONTACT */
 .contact{
 display:flex;
 justify-content:center;
@@ -254,6 +292,14 @@ gap:20px;
 flex-wrap:wrap;
 }
 
+.contact-box{
+background:rgba(255,255,255,0.04);
+padding:20px;
+border-radius:15px;
+border:1px solid rgba(255,215,0,0.1);
+}
+
+/* FOOTER */
 footer{
 text-align:center;
 padding:25px;
@@ -279,11 +325,11 @@ max-width:100%;
 height:200px;
 }
 
-.tags{
-justify-content:center;
+.edu-box{
+flex-direction:column;
+text-align:center;
 }
 }
-
 </style>
 </head>
 
@@ -310,7 +356,7 @@ justify-content:center;
 <div class="hero-text">
 <h1>Hi, I'm <span>Edmar</span> 👋</h1>
 <p>
-a 2nd Year Information Systems student who is passionate about technology, system development, and solving real-world problems. I am dedicated to continuous learning and improving my skills in web development, documentation, digital systems, and calligraphy, with a strong interest in creating efficient and user-friendly solutions. I consider myself adaptable, detail-oriented, and a team player, with strengths in critical thinking, communication, and quickly learning new technologies in fast-paced environments. My goal is to grow as an IT professional, gain valuable experience, and contribute to meaningful projects that make a positive impact through technology.
+Information Systems student passionate about building systems, improving user experience, and solving real-world problems.
 </p>
 </div>
 </section>
@@ -323,45 +369,26 @@ a 2nd Year Information Systems student who is passionate about technology, syste
 
 <div class="projects-container">
 
-<!-- PROJECT 1 -->
 <div class="project-card">
 <div class="project-number">01</div>
-
 <div class="frame">
 <img src="project1.jpg" alt="Project 1">
 </div>
-
 <div class="project-info">
 <h3>Customer Feedback System</h3>
 <p>A system that collects and analyzes customer feedback to improve business services.</p>
 
-<div class="tags">
-<span>Python</span>
-<span>Kivy</span>
-<span>SQLite</span>
-</div>
-</div>
-</div>
 
-<!-- PROJECT 2 -->
 <div class="project-card">
 <div class="project-number">02</div>
-
 <div class="frame">
 <img src="project2.png" alt="Project 2">
 </div>
-
 <div class="project-info">
 <h3>Salon Reservation System</h3>
 <p>An online booking system for managing salon appointments efficiently.</p>
 
-<div class="tags">
-<span>Python</span>
-<span>Tkinter</span>
-<span>SQLite</span>
-</div>
-</div>
-</div>
+
 
 </div>
 </section>
@@ -369,10 +396,19 @@ a 2nd Year Information Systems student who is passionate about technology, syste
 <!-- EDUCATION -->
 <section id="education">
 <h2 class="title">Education</h2>
+
 <div class="edu-box">
+
+<div class="edu-img">
+<img src="school.jpg" alt="School">
+</div>
+
+<div class="edu-info">
 <h3>Davao del Norte State College</h3>
 <p>Bachelor of Science in Information Systems</p>
 <p>2024 - 2028</p>
+</div>
+
 </div>
 </section>
 
@@ -401,6 +437,7 @@ a 2nd Year Information Systems student who is passionate about technology, syste
 <!-- CONTACT -->
 <section id="contact">
 <h2 class="title">Contact</h2>
+
 <div class="contact">
 <div class="contact-box">
 <p>Email</p>
