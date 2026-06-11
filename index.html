@@ -22,7 +22,7 @@ color:#fff;
 overflow-x:hidden;
 }
 
-/* 🌈 ANIME BACKGROUND */
+/* BACKGROUND */
 body::before{
 content:"";
 position:fixed;
@@ -98,7 +98,6 @@ text-decoration:none;
 
 nav a:hover{
 color:#facc15;
-text-shadow:0 0 10px #facc15;
 }
 
 /* HERO */
@@ -140,22 +139,25 @@ color:#facc15;
 text-shadow:0 0 10px #facc15;
 }
 
-/* 🔥 JUSTIFY ABOUT ME */
 .hero-text p{
 margin-top:15px;
 color:#ccc;
 line-height:1.7;
-text-align:justify;
 }
 
-/* TITLE */
+/* TITLE (FIXED SPACING HERE) */
 .title{
 text-align:center;
-margin-bottom:60px;
+margin-bottom:70px;
+margin-top:20px;
 color:#facc15;
 font-size:30px;
 text-shadow:0 0 10px #facc15;
-letter-spacing:2px;
+}
+
+/* SECTION SPACING FIX (IMPORTANT) */
+section{
+padding:140px 10% 120px;   /* 🔥 increased spacing */
 }
 
 /* PROJECTS */
@@ -163,7 +165,6 @@ letter-spacing:2px;
 display:flex;
 flex-direction:column;
 gap:80px;
-padding:0 10%;
 }
 
 .project-card{
@@ -207,10 +208,10 @@ transform:scale(1.1);
 display:flex;
 align-items:center;
 justify-content:center;
-gap:50px;
+gap:40px;
 flex-wrap:wrap;
 text-align:center;
-padding:40px;
+padding:30px;
 border-radius:20px;
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.1);
@@ -218,21 +219,11 @@ max-width:800px;
 margin:auto;
 }
 
-.edu-box img{
-width:260px;
-height:180px;
-object-fit:cover;
-border-radius:15px;
-border:2px solid #facc15;
-}
-
 /* SKILLS */
 .skills{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-padding:0 10%;
-margin-top:10px;
+gap:20px;
 }
 
 .skill-box{
@@ -240,8 +231,8 @@ padding:20px;
 border-radius:15px;
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.1);
-transition:.3s;
 text-align:center;
+transition:.3s;
 }
 
 .skill-box:hover{
@@ -253,41 +244,25 @@ box-shadow:0 0 20px #facc15;
 .contact-wrapper{
 display:grid;
 grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-gap:30px;
+gap:25px;
 max-width:900px;
 margin:auto;
-padding:20px;
-justify-items:center;
-margin-top:10px;
 }
 
 .contact-box{
-width:100%;
-max-width:250px;
 padding:22px;
 border-radius:18px;
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,215,0,0.15);
 text-align:center;
-text-decoration:none;
-color:#fff;
 transition:0.4s;
-position:relative;
-overflow:hidden;
 }
 
 .contact-box:hover{
 transform:translateY(-10px);
 box-shadow:0 0 25px #facc15;
-border-color:#facc15;
 }
 
-.contact-box h3{
-color:#facc15;
-margin-bottom:8px;
-}
-
-/* FOOTER */
 footer{
 text-align:center;
 padding:20px;
@@ -296,6 +271,7 @@ border-top:1px solid rgba(255,255,255,0.1);
 margin-top:50px;
 }
 
+/* RESPONSIVE */
 @media(max-width:900px){
 .hero{
 flex-direction:column;
@@ -337,7 +313,9 @@ text-align:center;
 
 <div class="hero-text">
 <h1>Hi, I'm <span>Edmar</span> ⚡</h1>
-<p>a 2nd Year Information Systems student who is passionate about technology, system development, and solving real-world problems. I am dedicated to continuous learning and improving my skills in web development, documentation, digital systems, and calligraphy, with a strong interest in creating efficient and user-friendly solutions. I consider myself adaptable, detail-oriented, and a team player, with strengths in critical thinking, communication, and quickly learning new technologies in fast-paced environments. My goal is to grow as an IT professional, gain valuable experience, and contribute to meaningful projects that make a positive impact through technology.</p>
+<p>
+Information Systems student passionate about building systems and solving real-world problems.
+</p>
 </div>
 </section>
 
@@ -352,7 +330,7 @@ text-align:center;
 </div>
 <div>
 <h3>Customer Feedback System</h3>
-<p>Collects and analyzes customer feedback for improvement.</p>
+<p>Collects and analyzes feedback for improvement.</p>
 </div>
 </div>
 
@@ -362,7 +340,7 @@ text-align:center;
 </div>
 <div>
 <h3>Salon Reservation System</h3>
-<p>Online booking system for salon appointments.</p>
+<p>Online booking system for salons.</p>
 </div>
 </div>
 
@@ -398,19 +376,19 @@ text-align:center;
 
 <div class="contact-wrapper">
 
-<a href="mailto:bestudioedmar@gmail.com" class="contact-box">
+<div class="contact-box">
 <h3>Email</h3>
 <p>bestudioedmar@gmail.com</p>
-</a>
+</div>
 
-<a href="tel:+639104955490" class="contact-box">
+<div class="contact-box">
 <h3>Phone</h3>
 <p>+63 910 495 5490</p>
-</a>
+</div>
 
 <div class="contact-box">
 <h3>Location</h3>
-<p>Davao del Norte, Philippines</p>
+<p>Davao del Norte</p>
 </div>
 
 <div class="contact-box">
