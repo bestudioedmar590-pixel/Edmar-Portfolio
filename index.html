@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Edmar | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:'Inter','Poppins',sans-serif;
 scroll-behavior:smooth;
 }
 
@@ -20,6 +20,13 @@ body{
 background:#050510;
 color:#fff;
 overflow-x:hidden;
+line-height:1.6;
+}
+
+/* selection */
+::selection{
+background:#facc15;
+color:#000;
 }
 
 /* BACKGROUND */
@@ -94,6 +101,7 @@ list-style:none;
 nav a{
 color:#ddd;
 text-decoration:none;
+transition:0.3s ease;
 }
 
 nav a:hover{
@@ -132,6 +140,7 @@ max-width:650px;
 
 .hero-text h1{
 font-size:3.2rem;
+letter-spacing:0.5px;
 }
 
 .hero-text span{
@@ -141,8 +150,9 @@ text-shadow:0 0 10px #facc15;
 
 .hero-text p{
 margin-top:15px;
-color:#ccc;
-line-height:1.7;
+color:#d6d6d6;
+line-height:1.8;
+text-align:justify;
 }
 
 /* TITLE */
@@ -280,6 +290,7 @@ border-top:1px solid rgba(255,255,255,0.1);
 margin-top:50px;
 }
 
+/* RESPONSIVE */
 @media(max-width:900px){
 .hero{
 flex-direction:column;
@@ -321,7 +332,9 @@ text-align:center;
 
 <div class="hero-text">
 <h1>Hi, I'm <span>Edmar</span> ⚡</h1>
-<p> a Information Systems student who is passionate about technology, system development, and solving real-world problems. I am dedicated to continuous learning and improving my skills in web development, documentation, digital systems, and calligraphy, with a strong interest in creating efficient and user-friendly solutions. I consider myself adaptable, detail-oriented, and a team player, with strengths in critical thinking, communication, and quickly learning new technologies in fast-paced environments. My goal is to grow as an IT professional, gain valuable experience, and contribute to meaningful projects that make a positive impact through technology.</p>
+<p>
+a Information Systems student who is passionate about technology, system development, and solving real-world problems. I am dedicated to continuous learning and improving my skills in web development, documentation, digital systems, and calligraphy, with a strong interest in creating efficient and user-friendly solutions. I consider myself adaptable, detail-oriented, and a team player, with strengths in critical thinking, communication, and quickly learning new technologies in fast-paced environments. My goal is to grow as an IT professional, gain valuable experience, and contribute to meaningful projects that make a positive impact through technology.
+</p>
 </div>
 </section>
 
