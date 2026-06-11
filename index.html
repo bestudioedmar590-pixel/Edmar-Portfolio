@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Edmar Bestudio | Portfolio</title>
 
-<!-- FONT (PRO LOOK) -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -18,7 +17,7 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0b0b0f;
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
 color:#eaeaea;
 overflow-x:hidden;
 }
@@ -32,15 +31,15 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:18px 10%;
-background:rgba(10,10,15,0.8);
-backdrop-filter:blur(10px);
-border-bottom:1px solid #1f1f2a;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,0.1);
 z-index:1000;
 }
 
 .logo{
-color:#facc15;
-font-weight:700;
+color:#00f5ff;
+font-weight:800;
 letter-spacing:2px;
 }
 
@@ -51,17 +50,17 @@ list-style:none;
 }
 
 nav a{
-color:#bbb;
+color:#ddd;
 text-decoration:none;
 font-size:14px;
 transition:.3s;
 }
 
 nav a:hover{
-color:#facc15;
+color:#00f5ff;
 }
 
-/* HERO (LEFT PROFILE DESIGN) */
+/* HERO */
 .hero{
 min-height:100vh;
 display:flex;
@@ -72,12 +71,12 @@ gap:60px;
 }
 
 .hero-image img{
-width:320px;
-height:320px;
+width:340px;
+height:340px;
 border-radius:50%;
 object-fit:cover;
-border:5px solid #facc15;
-box-shadow:0 0 30px rgba(250,204,21,0.25);
+border:5px solid #00f5ff;
+box-shadow:0 0 40px rgba(0,245,255,0.3);
 transition:.4s;
 }
 
@@ -91,86 +90,87 @@ max-width:650px;
 
 .hero-text h1{
 font-size:3.2rem;
-font-weight:700;
 }
 
 .hero-text span{
-color:#facc15;
+color:#00f5ff;
 }
 
 .hero-text p{
 margin-top:15px;
-color:#bdbdbd;
+color:#ccc;
 line-height:1.7;
-font-size:15px;
 }
 
-/* SECTIONS */
-section{
-padding:90px 10%;
-}
-
+/* SECTION TITLE */
 .title{
 text-align:center;
 margin-bottom:45px;
-color:#facc15;
-font-size:22px;
+color:#00f5ff;
+font-size:24px;
 letter-spacing:1px;
 }
 
-/* PROJECTS (IMAGES KEPT CLEAN & CLEAR) */
+/* PROJECTS */
 .projects{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:30px;
 }
 
+/* PROJECT CARD */
 .project-card{
-background:rgba(255,255,255,0.03);
-border:1px solid #1f1f2a;
-border-radius:16px;
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.1);
+border-radius:18px;
 overflow:hidden;
+backdrop-filter:blur(10px);
 transition:.4s;
 }
 
 .project-card:hover{
 transform:translateY(-10px);
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
 }
 
-.project-card img{
+/* FIXED IMAGE FRAME */
+.img-box{
 width:100%;
 height:230px;
+overflow:hidden;
+}
+
+.img-box img{
+width:100%;
+height:100%;
 object-fit:cover;
-display:block;
 transition:.4s;
 }
 
 .project-card:hover img{
-transform:scale(1.05);
+transform:scale(1.08);
 }
 
 .project-card h3{
-padding:15px 15px 5px;
-color:#facc15;
-font-size:16px;
+padding:15px;
+color:#00f5ff;
 }
 
 .project-card p{
 padding:0 15px 20px;
-color:#bbb;
-font-size:14px;
+color:#ddd;
 }
 
 /* EDUCATION */
 .edu-box{
-max-width:600px;
+max-width:650px;
 margin:auto;
-background:rgba(255,255,255,0.03);
+background:rgba(255,255,255,0.06);
 padding:25px;
-border-radius:15px;
-border:1px solid #1f1f2a;
+border-radius:16px;
+border:1px solid rgba(255,255,255,0.1);
 text-align:center;
+backdrop-filter:blur(10px);
 }
 
 /* SKILLS */
@@ -181,14 +181,14 @@ gap:25px;
 }
 
 .skill-box{
-background:rgba(255,255,255,0.03);
+background:rgba(255,255,255,0.06);
 padding:20px;
-border-radius:15px;
-border:1px solid #1f1f2a;
+border-radius:16px;
+border:1px solid rgba(255,255,255,0.1);
 }
 
 .skill-box h3{
-color:#facc15;
+color:#00f5ff;
 margin-bottom:10px;
 }
 
@@ -201,20 +201,20 @@ flex-wrap:wrap;
 }
 
 .contact-box{
-background:rgba(255,255,255,0.03);
+background:rgba(255,255,255,0.06);
 padding:20px;
 border-radius:12px;
 width:240px;
 text-align:center;
-border:1px solid #1f1f2a;
+border:1px solid rgba(255,255,255,0.1);
 }
 
 /* FOOTER */
 footer{
 text-align:center;
 padding:25px;
-color:#777;
-border-top:1px solid #1f1f2a;
+color:#aaa;
+border-top:1px solid rgba(255,255,255,0.1);
 margin-top:50px;
 }
 
@@ -245,17 +245,18 @@ font-size:2.4rem;
 </ul>
 </nav>
 
-<!-- HERO (LEFT PROFILE) -->
+<!-- HERO -->
 <section class="hero" id="home">
 
 <div class="hero-image">
-<img src="Myprofile.jpg">
+<img src="Myprofile.jpg" alt="Profile">
 </div>
 
 <div class="hero-text">
 <h1>Hi, I'm <span>Edmar</span> 👋</h1>
 <p>
-Information Systems student passionate about designing and developing systems that solve real-world problems. I am dedicated to continuous learning, improving user experience, and building efficient digital solutions. I also have skills in documentation, calligraphy, and teamwork, with strong adaptability and critical thinking.
+Information Systems student passionate about building systems that solve real-world problems.
+Focused on usability, teamwork, and continuous improvement.
 </p>
 </div>
 
@@ -268,15 +269,19 @@ Information Systems student passionate about designing and developing systems th
 <div class="projects">
 
 <div class="project-card">
-<img src="project1.jpg">
+<div class="img-box">
+<img src="project1.jpg" alt="Project 1">
+</div>
 <h3>Customer Feedback System</h3>
-<p>Collects and analyzes customer feedback to improve services.</p>
+<p>Collects and analyzes customer feedback to improve services efficiently.</p>
 </div>
 
 <div class="project-card">
-<img src="project2.png">
+<div class="img-box">
+<img src="project2.png" alt="Project 2">
+</div>
 <h3>Salon Reservation System</h3>
-<p>Online booking system for salon appointment management.</p>
+<p>Online booking system that manages salon appointments easily.</p>
 </div>
 
 </div>
@@ -301,12 +306,12 @@ Information Systems student passionate about designing and developing systems th
 
 <div class="skill-box">
 <h3>Technical</h3>
-<p>HTML, Microsoft Word, Excel, Documentation</p>
+<p>HTML, MS Word, Excel, Documentation</p>
 </div>
 
 <div class="skill-box">
 <h3>Soft Skills</h3>
-<p>Adaptability, Critical Thinking, Communication, Teamwork</p>
+<p>Adaptability, Critical Thinking, Teamwork</p>
 </div>
 
 <div class="skill-box">
