@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Edmar Bestudio | Portfolio</title>
+<title>Edmar |  Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -12,14 +12,57 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-scroll-behavior:smooth;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#0b0b0f;
-color:#eaeaea;
+background:#050510;
+color:#fff;
 overflow-x:hidden;
+}
+
+/* 🌈 ANIME BACKGROUND ANIMATION */
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:linear-gradient(120deg,#0ff,#f0f,#facc15,#0ff);
+background-size:400% 400%;
+animation:gradient 10s ease infinite;
+opacity:0.08;
+z-index:-1;
+}
+
+@keyframes gradient{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* FLOATING PARTICLES */
+.particles{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+overflow:hidden;
+}
+
+.particles span{
+position:absolute;
+width:6px;
+height:6px;
+background:#facc15;
+border-radius:50%;
+animation:float 10s linear infinite;
+opacity:0.5;
+}
+
+@keyframes float{
+from{transform:translateY(100vh) scale(0);}
+to{transform:translateY(-10vh) scale(1);}
 }
 
 /* NAV */
@@ -31,16 +74,16 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:18px 10%;
-background:rgba(0,0,0,0.6);
+background:rgba(0,0,0,0.4);
 backdrop-filter:blur(12px);
-border-bottom:1px solid rgba(255,215,0,0.15);
+border-bottom:1px solid rgba(255,255,255,0.1);
 z-index:1000;
 }
 
 .logo{
 color:#facc15;
 font-weight:800;
-letter-spacing:2px;
+text-shadow:0 0 10px #facc15;
 }
 
 nav ul{
@@ -52,12 +95,12 @@ list-style:none;
 nav a{
 color:#ddd;
 text-decoration:none;
-font-size:14px;
 transition:.3s;
 }
 
 nav a:hover{
 color:#facc15;
+text-shadow:0 0 10px #facc15;
 }
 
 /* HERO */
@@ -68,6 +111,12 @@ align-items:center;
 justify-content:space-between;
 padding:0 10%;
 gap:60px;
+animation:fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(30px);}
+to{opacity:1; transform:translateY(0);}
 }
 
 .hero-image img{
@@ -75,13 +124,15 @@ width:340px;
 height:340px;
 border-radius:50%;
 object-fit:cover;
-border:5px solid #facc15;
-box-shadow:0 0 40px rgba(250,204,21,0.3);
-transition:.4s;
+border:4px solid #facc15;
+box-shadow:0 0 40px #facc15;
+animation:floatImg 4s ease-in-out infinite;
 }
 
-.hero-image img:hover{
-transform:scale(1.05);
+@keyframes floatImg{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
 }
 
 .hero-text{
@@ -90,10 +141,12 @@ max-width:650px;
 
 .hero-text h1{
 font-size:3.2rem;
+text-shadow:0 0 15px #000;
 }
 
 .hero-text span{
 color:#facc15;
+text-shadow:0 0 15px #facc15;
 }
 
 .hero-text p{
@@ -105,82 +158,49 @@ line-height:1.7;
 /* TITLE */
 .title{
 text-align:center;
-margin-bottom:45px;
-color:#facc15;
-font-size:28px;
-}
-
-/* ================= PROJECTS ================= */
-
-.projects-section{
-padding:100px 10%;
-}
-
-.subtitle{
-text-align:center;
-color:#aaa;
-margin-top:-20px;
 margin-bottom:50px;
-font-size:14px;
+color:#facc15;
+font-size:30px;
+text-shadow:0 0 10px #facc15;
 }
 
+/* PROJECTS */
 .projects-container{
 display:flex;
 flex-direction:column;
-gap:60px;
+gap:80px;
+padding:0 10%;
 }
 
 .project-card{
-position:relative;
 display:flex;
 align-items:center;
-justify-content:space-between;
-gap:50px;
+gap:40px;
 padding:30px;
-border-radius:22px;
-background:rgba(255,255,255,0.03);
-border:1px solid rgba(255,215,0,0.15);
-backdrop-filter:blur(12px);
+border-radius:20px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
 transition:.4s;
-overflow:hidden;
+animation:slideUp 1s ease;
 }
 
-.project-card::before{
-content:"";
-position:absolute;
-inset:0;
-background:radial-gradient(circle at top left, rgba(255,215,0,0.12), transparent 60%);
-opacity:0;
-transition:.4s;
-}
-
-.project-card:hover::before{
-opacity:1;
+@keyframes slideUp{
+from{opacity:0; transform:translateY(50px);}
+to{opacity:1; transform:translateY(0);}
 }
 
 .project-card:hover{
-transform:translateY(-10px);
-box-shadow:0 25px 60px rgba(0,0,0,0.7);
-border-color:rgba(255,215,0,0.4);
-}
-
-.project-number{
-position:absolute;
-top:15px;
-right:20px;
-font-size:30px;
-font-weight:700;
-color:rgba(255,215,0,0.35);
+transform:scale(1.03);
+box-shadow:0 0 30px #facc15;
 }
 
 .frame{
-width:100%;
-max-width:340px;
+width:340px;
 height:220px;
-border-radius:20px;
 overflow:hidden;
-border:3px solid rgba(255,215,0,0.25);
-box-shadow:0 15px 40px rgba(0,0,0,0.6);
+border-radius:15px;
+border:2px solid #facc15;
 }
 
 .frame img{
@@ -191,85 +211,40 @@ transition:.4s;
 }
 
 .project-card:hover img{
-transform:scale(1.08);
+transform:scale(1.1);
 }
 
-.project-info{
-flex:1;
-}
-
-.project-info h3{
-color:#facc15;
-font-size:22px;
-margin-bottom:10px;
-}
-
-.project-info p{
-color:#ccc;
-font-size:14px;
-line-height:1.7;
-margin-bottom:15px;
-}
-
-
-
-/* ================= EDUCATION ================= */
-
-section{
-padding:90px 10%;
-}
-
+/* EDUCATION */
 .edu-box{
-display:flex;
-align-items:center;
-gap:40px;
-flex-wrap:wrap;
-justify-content:center;
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,215,0,0.15);
-padding:25px;
-border-radius:18px;
-backdrop-filter:blur(10px);
-}
-
-.edu-img img{
-width:260px;
-height:180px;
-object-fit:cover;
-border-radius:14px;
-border:2px solid rgba(255,215,0,0.3);
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
-transition:.4s;
-}
-
-.edu-img img:hover{
-transform:scale(1.05);
-}
-
-.edu-info h3{
-color:#facc15;
-margin-bottom:8px;
-font-size:20px;
-}
-
-.edu-info p{
-color:#ccc;
-font-size:14px;
-line-height:1.6;
+text-align:center;
+padding:30px;
+border-radius:20px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+max-width:600px;
+margin:auto;
+animation:fadeIn 2s ease;
 }
 
 /* SKILLS */
 .skills{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+gap:20px;
+padding:0 10%;
 }
 
 .skill-box{
-background:rgba(255,255,255,0.04);
 padding:20px;
 border-radius:15px;
-border:1px solid rgba(255,215,0,0.1);
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+transition:.3s;
+}
+
+.skill-box:hover{
+transform:translateY(-8px);
+box-shadow:0 0 20px #facc15;
 }
 
 /* CONTACT */
@@ -281,47 +256,49 @@ flex-wrap:wrap;
 }
 
 .contact-box{
-background:rgba(255,255,255,0.04);
 padding:20px;
 border-radius:15px;
-border:1px solid rgba(255,215,0,0.1);
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
 }
 
-/* FOOTER */
 footer{
 text-align:center;
-padding:25px;
+padding:20px;
 color:#aaa;
-border-top:1px solid rgba(255,215,0,0.1);
+border-top:1px solid rgba(255,255,255,0.1);
 margin-top:50px;
 }
 
-/* RESPONSIVE */
 @media(max-width:900px){
 .hero{
 flex-direction:column;
 text-align:center;
 }
-
 .project-card{
 flex-direction:column;
 text-align:center;
 }
-
 .frame{
-max-width:100%;
-height:200px;
-}
-
-.edu-box{
-flex-direction:column;
-text-align:center;
+width:100%;
 }
 }
 </style>
 </head>
 
 <body>
+
+<!-- PARTICLES -->
+<div class="particles">
+<span style="left:10%"></span>
+<span style="left:20%"></span>
+<span style="left:30%"></span>
+<span style="left:40%"></span>
+<span style="left:50%"></span>
+<span style="left:60%"></span>
+<span style="left:70%"></span>
+<span style="left:80%"></span>
+</div>
 
 <!-- NAV -->
 <nav>
@@ -338,99 +315,73 @@ text-align:center;
 <!-- HERO -->
 <section class="hero" id="home">
 <div class="hero-image">
-<img src="Myprofile.jpg" alt="Profile">
+<img src="Myprofile.jpg">
 </div>
 
 <div class="hero-text">
-<h1>Hi, I'm <span>Edmar</span> 👋</h1>
-<p>
-Information Systems student passionate about building systems, improving user experience, and solving real-world problems.
-</p>
+<h1>Hi, I'm <span>Edmar</span> ⚡</h1>
+<p>Information Systems student passionate about building systems, solving real-world problems, and learning modern technology with creativity and discipline.</p>
 </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="projects-section">
-
-<h2 class="title">Projects</h2>
-<p class="subtitle">Here are some of the systems and applications I've built.</p>
+<section id="projects">
+<h2 class="title">PROJECTS</h2>
 
 <div class="projects-container">
 
 <div class="project-card">
-<div class="project-number">01</div>
 <div class="frame">
-<img src="project1.jpg" alt="Project 1">
+<img src="project1.jpg">
 </div>
-<div class="project-info">
+<div>
 <h3>Customer Feedback System</h3>
-<p>A system that collects and analyzes customer feedback to improve business services.</p>
-
+<p>System that collects and analyzes feedback for business improvement.</p>
+</div>
+</div>
 
 <div class="project-card">
-<div class="project-number">02</div>
 <div class="frame">
-<img src="project2.png" alt="Project 2">
+<img src="project2.png">
 </div>
-<div class="project-info">
+<div>
 <h3>Salon Reservation System</h3>
-<p>An online booking system for managing salon appointments efficiently.</p>
-
-
+<p>Online booking system for managing salon appointments.</p>
+</div>
+</div>
 
 </div>
 </section>
 
 <!-- EDUCATION -->
 <section id="education">
-<h2 class="title">Education</h2>
+<h2 class="title">EDUCATION</h2>
 
 <div class="edu-box">
-
-<div class="edu-img">
-<img src="schoolpic.jpg" alt="School">
-</div>
-
-<div class="edu-info">
 <h3>Davao del Norte State College</h3>
 <p>Bachelor of Science in Information Systems</p>
 <p>2024 - 2028</p>
-</div>
-
 </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-<h2 class="title">Skills</h2>
+<h2 class="title">SKILLS</h2>
 
 <div class="skills">
-<div class="skill-box">
-<h3>Technical</h3>
-<p>HTML, MS Word, Excel, Documentation</p>
-</div>
-
-<div class="skill-box">
-<h3>Soft Skills</h3>
-<p>Adaptability, Critical Thinking, Teamwork</p>
-</div>
-
-<div class="skill-box">
-<h3>Creative</h3>
-<p>Calligraphy, Basic Design</p>
-</div>
+<div class="skill-box">HTML / CSS / JS</div>
+<div class="skill-box">Microsoft Office</div>
+<div class="skill-box">Documentation</div>
+<div class="skill-box">Calligraphy</div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-<h2 class="title">Contact</h2>
+<h2 class="title">CONTACT</h2>
 
 <div class="contact">
-<div class="contact-box">
-<p>Email</p>
-<strong>bestudioedmar@gmail.com</strong>
-</div>
+<div class="contact-box">bestudioedmar@gmail.com</div>
 </div>
 </section>
 
