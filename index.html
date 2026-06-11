@@ -22,7 +22,7 @@ color:#fff;
 overflow-x:hidden;
 }
 
-
+/* 🌈 ANIME BACKGROUND */
 body::before{
 content:"";
 position:fixed;
@@ -41,7 +41,7 @@ z-index:-1;
 100%{background-position:0% 50%;}
 }
 
-
+/* PARTICLES */
 .particles{
 position:fixed;
 width:100%;
@@ -140,20 +140,25 @@ color:#facc15;
 text-shadow:0 0 10px #facc15;
 }
 
+/* 🔥 JUSTIFY ABOUT ME */
 .hero-text p{
 margin-top:15px;
 color:#ccc;
 line-height:1.7;
+text-align:justify;
 }
 
+/* TITLE */
 .title{
 text-align:center;
-margin-bottom:50px;
+margin-bottom:60px;
 color:#facc15;
 font-size:30px;
 text-shadow:0 0 10px #facc15;
+letter-spacing:2px;
 }
 
+/* PROJECTS */
 .projects-container{
 display:flex;
 flex-direction:column;
@@ -197,14 +202,15 @@ transition:.4s;
 transform:scale(1.1);
 }
 
+/* EDUCATION */
 .edu-box{
 display:flex;
 align-items:center;
 justify-content:center;
-gap:40px;
+gap:50px;
 flex-wrap:wrap;
 text-align:center;
-padding:30px;
+padding:40px;
 border-radius:20px;
 background:rgba(255,255,255,0.05);
 border:1px solid rgba(255,255,255,0.1);
@@ -220,11 +226,13 @@ border-radius:15px;
 border:2px solid #facc15;
 }
 
+/* SKILLS */
 .skills{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:30px;
 padding:0 10%;
+margin-top:10px;
 }
 
 .skill-box{
@@ -241,14 +249,16 @@ transform:translateY(-8px);
 box-shadow:0 0 20px #facc15;
 }
 
+/* CONTACT */
 .contact-wrapper{
 display:grid;
 grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-gap:25px;
+gap:30px;
 max-width:900px;
 margin:auto;
 padding:20px;
 justify-items:center;
+margin-top:10px;
 }
 
 .contact-box{
@@ -277,6 +287,7 @@ color:#facc15;
 margin-bottom:8px;
 }
 
+/* FOOTER */
 footer{
 text-align:center;
 padding:20px;
@@ -363,7 +374,6 @@ text-align:center;
 
 <div class="edu-box">
 <img src="schoolpic.jpg">
-
 <div>
 <h3>Davao del Norte State College</h3>
 <p>Bachelor of Science in Information Systems</p>
