@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Edmar Bestudio | Student Portfolio</title>
+<title>Edmar Bestudio | Portfolio</title>
 
 <style>
 *{
@@ -20,20 +20,6 @@ color:#e5e5e5;
 overflow-x:hidden;
 }
 
-/* BACKGROUND GLOW */
-body::before{
-content:"";
-position:fixed;
-width:500px;
-height:500px;
-background:#facc15;
-filter:blur(150px);
-opacity:0.10;
-top:10%;
-left:10%;
-z-index:-1;
-}
-
 /* NAV */
 nav{
 position:fixed;
@@ -44,7 +30,6 @@ justify-content:space-between;
 align-items:center;
 padding:18px 10%;
 background:rgba(0,0,0,0.85);
-backdrop-filter:blur(12px);
 border-bottom:1px solid #222;
 z-index:1000;
 }
@@ -52,7 +37,6 @@ z-index:1000;
 .logo{
 color:#facc15;
 font-weight:800;
-letter-spacing:2px;
 }
 
 nav ul{
@@ -64,7 +48,6 @@ list-style:none;
 nav a{
 color:#aaa;
 text-decoration:none;
-transition:.3s;
 }
 
 nav a:hover{
@@ -82,51 +65,28 @@ flex-wrap:wrap;
 gap:40px;
 }
 
-.hero-text{
-max-width:600px;
-}
-
 .hero-text h1{
-font-size:3.5rem;
+font-size:3rem;
 }
 
 .hero-text span{
 color:#facc15;
-text-shadow:0 0 15px #facc15;
 }
 
 .hero-text p{
-margin-top:15px;
 color:#bbb;
-line-height:1.6;
+margin-top:10px;
 }
 
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:12px 28px;
-background:#facc15;
-color:#000;
-border-radius:30px;
-font-weight:bold;
-text-decoration:none;
-transition:.3s;
-}
-
-.btn:hover{
-transform:scale(1.08);
-}
-
-/* PROFILE */
 .hero-image img{
-width:300px;
-height:300px;
+width:260px;
+height:260px;
 border-radius:50%;
 object-fit:cover;
 border:4px solid #facc15;
 }
 
-/* SECTIONS */
+/* SECTION */
 section{
 padding:100px 10%;
 }
@@ -137,130 +97,86 @@ margin-bottom:40px;
 color:#facc15;
 }
 
-/* ABOUT */
-.about{
-max-width:900px;
-margin:auto;
-line-height:1.8;
-color:#bbb;
-}
-
-/* EDUCATION */
-.edu{
-background:rgba(255,255,255,0.03);
-padding:30px;
-border-radius:15px;
-border-left:4px solid #facc15;
-max-width:600px;
-margin:auto;
-}
-
-/* SKILLS */
-.skills-container{
-max-width:750px;
-margin:auto;
-}
-
-.skill{
-margin-bottom:20px;
-}
-
-.bar{
-width:100%;
-height:10px;
-background:#111;
-border-radius:20px;
-overflow:hidden;
-}
-
-.fill{
-height:100%;
-background:#facc15;
-}
-
-.html{width:95%}
-.css{width:90%}
-.js{width:70%}
-.doc{width:95%}
-
-/* PROJECTS */
+/* PROJECT GRID */
 .projects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 }
 
+/* PROJECT CARD */
 .project-card{
 background:rgba(255,255,255,0.03);
 border:1px solid #222;
 border-radius:15px;
+padding:15px;
+text-align:center;
+transition:0.4s;
 overflow:hidden;
-transition:.4s;
-display:flex;
-flex-direction:column;
 }
 
 .project-card:hover{
-transform:translateY(-8px);
+transform:translateY(-8px) scale(1.02);
+box-shadow:0 0 25px rgba(250,204,21,0.2);
 }
 
+/* IMAGE BASE */
 .project-card img{
 width:100%;
-height:200px;
-object-fit:cover;
+border-radius:12px;
+background:#000;
+padding:10px;
+transition:0.4s;
 }
 
+/* 📸 PROJECT 1 - PHONE (VERTICAL) */
+.project-card:nth-child(1) img{
+height:340px;
+object-fit:contain;
+}
+
+/* 🖥 PROJECT 2 - SYSTEM (HORIZONTAL) */
+.project-card:nth-child(2) img{
+height:230px;
+object-fit:contain;
+}
+
+/* HOVER ZOOM */
+.project-card:hover img{
+transform:scale(1.05);
+}
+
+/* TEXT */
 .project-card h3{
-padding:15px;
+margin-top:12px;
 color:#facc15;
 }
 
 .project-card p{
-padding:0 15px 15px;
 color:#bbb;
-}
-
-.project-buttons{
-display:flex;
-gap:10px;
-padding:0 15px 20px;
-}
-
-.btn-outline{
-border:2px solid #facc15;
-color:#facc15;
-padding:8px 15px;
-border-radius:20px;
-text-decoration:none;
-}
-
-.btn-outline:hover{
-background:#facc15;
-color:#000;
+font-size:0.95rem;
 }
 
 /* CONTACT */
 .contact{
 display:flex;
 justify-content:center;
-gap:25px;
+gap:20px;
 flex-wrap:wrap;
 }
 
 .contact-box{
-background:rgba(255,255,255,0.03);
+background:#111;
 padding:20px;
-border-radius:12px;
-width:250px;
+border-radius:10px;
+width:220px;
 text-align:center;
-border:1px solid #222;
 }
 
 footer{
 text-align:center;
 padding:20px;
 color:#777;
-border-top:1px solid #222;
 }
 
 /* RESPONSIVE */
@@ -268,9 +184,6 @@ border-top:1px solid #222;
 .hero{
 flex-direction:column;
 text-align:center;
-}
-.hero-text h1{
-font-size:2.5rem;
 }
 }
 </style>
@@ -282,9 +195,6 @@ font-size:2.5rem;
 <div class="logo">EDMAR</div>
 <ul>
 <li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#education">Education</a></li>
-<li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
@@ -293,37 +203,11 @@ font-size:2.5rem;
 <section class="hero" id="home">
 <div class="hero-text">
 <h1>Hi, I'm <span>Edmar 👋</span></h1>
-<p>Information Systems student passionate about building systems and solving real-world problems.</p>
-<a href="https://github.com/" class="btn">View GitHub</a>
+<p>a 2nd Year Information Systems student who is passionate about technology, system development, and solving real-world problems. I am dedicated to continuous learning and improving my skills in web development, documentation, digital systems, and calligraphy, with a strong interest in creating efficient and user-friendly solutions. I consider myself adaptable, detail-oriented, and a team player, with strengths in critical thinking, communication, and quickly learning new technologies in fast-paced environments. My goal is to grow as an IT professional, gain valuable experience, and contribute to meaningful projects that make a positive impact through technology.</p>
 </div>
 
 <div class="hero-image">
 <img src="Myprofile.jpg">
-</div>
-</section>
-
-<section id="about">
-<h2 class="title">About Me</h2>
-<div class="about">
-<p>EDMAR M. BESTUDIO, a 2nd Year Information Systems student passionate about technology, problem-solving, and continuous learning.</p>
-</div>
-</section>
-
-<section id="education">
-<h2 class="title">Education</h2>
-<div class="edu">
-<h3>Davao del Norte State College</h3>
-<p>BS Information Systems (2024 - 2028)</p>
-</div>
-</section>
-
-<section id="skills">
-<h2 class="title">Skills</h2>
-<div class="skills-container">
-<div class="skill"><p>HTML</p><div class="bar"><div class="fill html"></div></div></div>
-<div class="skill"><p>Microsoft Word</p><div class="bar"><div class="fill css"></div></div></div>
-<div class="skill"><p>Microsoft Excel</p><div class="bar"><div class="fill js"></div></div></div>
-<div class="skill"><p>Documentation</p><div class="bar"><div class="fill doc"></div></div></div>
 </div>
 </section>
 
@@ -336,20 +220,12 @@ font-size:2.5rem;
 <img src="project1.jpg">
 <h3>Customer Feedback System</h3>
 <p>Collects and analyzes customer feedback.</p>
-<div class="project-buttons">
-<a href="#" class="btn">View</a>
-<a href="#" class="btn-outline">GitHub</a>
-</div>
 </div>
 
 <div class="project-card">
 <img src="project2.png">
 <h3>Salon Reservation System</h3>
 <p>Online booking system for salons.</p>
-<div class="project-buttons">
-<a href="#" class="btn">View</a>
-<a href="#" class="btn-outline">GitHub</a>
-</div>
 </div>
 
 </div>
@@ -361,11 +237,6 @@ font-size:2.5rem;
 <div class="contact-box">
 <p>Email</p>
 <strong>bestudioedmar@gmail.com</strong>
-</div>
-
-<div class="contact-box">
-<p>Location</p>
-<strong>Carmen, Davao del Norte</strong>
 </div>
 </div>
 </section>
