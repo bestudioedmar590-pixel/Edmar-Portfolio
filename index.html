@@ -17,7 +17,7 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+background:#0b0b0f;
 color:#eaeaea;
 overflow-x:hidden;
 }
@@ -31,14 +31,14 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:18px 10%;
-background:rgba(0,0,0,0.4);
+background:rgba(0,0,0,0.6);
 backdrop-filter:blur(12px);
-border-bottom:1px solid rgba(255,255,255,0.1);
+border-bottom:1px solid rgba(255,215,0,0.15);
 z-index:1000;
 }
 
 .logo{
-color:#00f5ff;
+color:#facc15;
 font-weight:800;
 letter-spacing:2px;
 }
@@ -57,7 +57,7 @@ transition:.3s;
 }
 
 nav a:hover{
-color:#00f5ff;
+color:#facc15;
 }
 
 /* HERO */
@@ -75,8 +75,8 @@ width:340px;
 height:340px;
 border-radius:50%;
 object-fit:cover;
-border:5px solid #00f5ff;
-box-shadow:0 0 40px rgba(0,245,255,0.3);
+border:5px solid #facc15;
+box-shadow:0 0 40px rgba(250,204,21,0.3);
 transition:.4s;
 }
 
@@ -93,7 +93,7 @@ font-size:3.2rem;
 }
 
 .hero-text span{
-color:#00f5ff;
+color:#facc15;
 }
 
 .hero-text p{
@@ -102,45 +102,89 @@ color:#ccc;
 line-height:1.7;
 }
 
-/* SECTION TITLE */
+/* TITLE */
 .title{
 text-align:center;
-margin-bottom:45px;
-color:#00f5ff;
-font-size:24px;
-letter-spacing:1px;
+margin-bottom:15px;
+color:#facc15;
+font-size:28px;
 }
 
-/* PROJECTS */
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
+.subtitle{
+text-align:center;
+color:#aaa;
+margin-bottom:50px;
+font-size:14px;
 }
 
-/* PROJECT CARD */
+/* ================= PROJECTS (ULTRA PRO) ================= */
+
+.projects-section{
+padding:100px 10%;
+background:#0b0b0f;
+}
+
+.projects-container{
+display:flex;
+flex-direction:column;
+gap:60px;
+}
+
 .project-card{
-background:rgba(255,255,255,0.06);
-border:1px solid rgba(255,255,255,0.1);
-border-radius:18px;
-overflow:hidden;
-backdrop-filter:blur(10px);
+position:relative;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:50px;
+padding:30px;
+border-radius:22px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,215,0,0.15);
+backdrop-filter:blur(12px);
 transition:.4s;
+overflow:hidden;
+}
+
+.project-card::before{
+content:"";
+position:absolute;
+inset:0;
+background:radial-gradient(circle at top left, rgba(255,215,0,0.12), transparent 60%);
+opacity:0;
+transition:.4s;
+}
+
+.project-card:hover::before{
+opacity:1;
 }
 
 .project-card:hover{
 transform:translateY(-10px);
-box-shadow:0 15px 40px rgba(0,0,0,0.5);
+box-shadow:0 25px 60px rgba(0,0,0,0.7);
+border-color:rgba(255,215,0,0.4);
 }
 
-/* FIXED IMAGE FRAME */
-.img-box{
+.project-number{
+position:absolute;
+top:15px;
+right:20px;
+font-size:30px;
+font-weight:700;
+color:rgba(255,215,0,0.35);
+}
+
+/* IMAGE FRAME */
+.frame{
 width:100%;
-height:230px;
+max-width:340px;
+height:220px;
+border-radius:20px;
 overflow:hidden;
+border:3px solid rgba(255,215,0,0.25);
+box-shadow:0 15px 40px rgba(0,0,0,0.6);
 }
 
-.img-box img{
+.frame img{
 width:100%;
 height:100%;
 object-fit:cover;
@@ -151,48 +195,58 @@ transition:.4s;
 transform:scale(1.08);
 }
 
-.project-card h3{
-padding:15px;
-color:#00f5ff;
+/* TEXT */
+.project-info{
+flex:1;
 }
 
-.project-card p{
-padding:0 15px 20px;
-color:#ddd;
+.project-info h3{
+color:#facc15;
+font-size:22px;
+margin-bottom:10px;
 }
 
-/* EDUCATION */
-.edu-box{
-max-width:650px;
-margin:auto;
-background:rgba(255,255,255,0.06);
-padding:25px;
-border-radius:16px;
-border:1px solid rgba(255,255,255,0.1);
-text-align:center;
-backdrop-filter:blur(10px);
+.project-info p{
+color:#ccc;
+font-size:14px;
+line-height:1.7;
+margin-bottom:15px;
 }
 
-/* SKILLS */
+/* TAGS */
+.tags{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.tags span{
+font-size:12px;
+padding:6px 12px;
+border-radius:20px;
+border:1px solid rgba(255,215,0,0.3);
+color:#facc15;
+}
+
+/* ================= OTHER SECTIONS ================= */
+
+.edu-box, .contact-box, .skill-box{
+background:rgba(255,255,255,0.04);
+padding:20px;
+border-radius:15px;
+border:1px solid rgba(255,215,0,0.1);
+}
+
+section{
+padding:90px 10%;
+}
+
 .skills{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
-.skill-box{
-background:rgba(255,255,255,0.06);
-padding:20px;
-border-radius:16px;
-border:1px solid rgba(255,255,255,0.1);
-}
-
-.skill-box h3{
-color:#00f5ff;
-margin-bottom:10px;
-}
-
-/* CONTACT */
 .contact{
 display:flex;
 justify-content:center;
@@ -200,21 +254,11 @@ gap:20px;
 flex-wrap:wrap;
 }
 
-.contact-box{
-background:rgba(255,255,255,0.06);
-padding:20px;
-border-radius:12px;
-width:240px;
-text-align:center;
-border:1px solid rgba(255,255,255,0.1);
-}
-
-/* FOOTER */
 footer{
 text-align:center;
 padding:25px;
 color:#aaa;
-border-top:1px solid rgba(255,255,255,0.1);
+border-top:1px solid rgba(255,215,0,0.1);
 margin-top:50px;
 }
 
@@ -224,10 +268,22 @@ margin-top:50px;
 flex-direction:column;
 text-align:center;
 }
-.hero-text h1{
-font-size:2.4rem;
+
+.project-card{
+flex-direction:column;
+text-align:center;
+}
+
+.frame{
+max-width:100%;
+height:200px;
+}
+
+.tags{
+justify-content:center;
 }
 }
+
 </style>
 </head>
 
@@ -247,7 +303,6 @@ font-size:2.4rem;
 
 <!-- HERO -->
 <section class="hero" id="home">
-
 <div class="hero-image">
 <img src="Myprofile.jpg" alt="Profile">
 </div>
@@ -255,33 +310,57 @@ font-size:2.4rem;
 <div class="hero-text">
 <h1>Hi, I'm <span>Edmar</span> 👋</h1>
 <p>
-Information Systems student passionate about building systems that solve real-world problems.
-Focused on usability, teamwork, and continuous improvement.
+a 2nd Year Information Systems student who is passionate about technology, system development, and solving real-world problems. I am dedicated to continuous learning and improving my skills in web development, documentation, digital systems, and calligraphy, with a strong interest in creating efficient and user-friendly solutions. I consider myself adaptable, detail-oriented, and a team player, with strengths in critical thinking, communication, and quickly learning new technologies in fast-paced environments. My goal is to grow as an IT professional, gain valuable experience, and contribute to meaningful projects that make a positive impact through technology.
 </p>
 </div>
-
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
+<section id="projects" class="projects-section">
+
 <h2 class="title">Projects</h2>
+<p class="subtitle">Here are some of the systems and applications I've built.</p>
 
-<div class="projects">
+<div class="projects-container">
 
+<!-- PROJECT 1 -->
 <div class="project-card">
-<div class="img-box">
+<div class="project-number">01</div>
+
+<div class="frame">
 <img src="project1.jpg" alt="Project 1">
 </div>
+
+<div class="project-info">
 <h3>Customer Feedback System</h3>
-<p>Collects and analyzes customer feedback to improve services efficiently.</p>
+<p>A system that collects and analyzes customer feedback to improve business services.</p>
+
+<div class="tags">
+<span>Python</span>
+<span>Kivy</span>
+<span>SQLite</span>
+</div>
+</div>
 </div>
 
+<!-- PROJECT 2 -->
 <div class="project-card">
-<div class="img-box">
+<div class="project-number">02</div>
+
+<div class="frame">
 <img src="project2.png" alt="Project 2">
 </div>
+
+<div class="project-info">
 <h3>Salon Reservation System</h3>
-<p>Online booking system that manages salon appointments easily.</p>
+<p>An online booking system for managing salon appointments efficiently.</p>
+
+<div class="tags">
+<span>Python</span>
+<span>Tkinter</span>
+<span>SQLite</span>
+</div>
+</div>
 </div>
 
 </div>
@@ -290,7 +369,6 @@ Focused on usability, teamwork, and continuous improvement.
 <!-- EDUCATION -->
 <section id="education">
 <h2 class="title">Education</h2>
-
 <div class="edu-box">
 <h3>Davao del Norte State College</h3>
 <p>Bachelor of Science in Information Systems</p>
@@ -303,7 +381,6 @@ Focused on usability, teamwork, and continuous improvement.
 <h2 class="title">Skills</h2>
 
 <div class="skills">
-
 <div class="skill-box">
 <h3>Technical</h3>
 <p>HTML, MS Word, Excel, Documentation</p>
@@ -318,14 +395,12 @@ Focused on usability, teamwork, and continuous improvement.
 <h3>Creative</h3>
 <p>Calligraphy, Basic Design</p>
 </div>
-
 </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
 <h2 class="title">Contact</h2>
-
 <div class="contact">
 <div class="contact-box">
 <p>Email</p>
